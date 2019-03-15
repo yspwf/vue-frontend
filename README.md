@@ -49,4 +49,5 @@ vue的前端
 </script>
 
 ```
-	
+
+执行： npm run dev 
