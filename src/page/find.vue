@@ -74,7 +74,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
                                             <div class="hot_user">
@@ -87,7 +87,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -101,7 +101,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -115,7 +115,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -129,7 +129,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -143,7 +143,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -157,7 +157,7 @@
                                                 <label>234赞</label>
                                             </div>
                                             <div class="focus">
-                                                <input type="botton" value="+ 关注">
+                                                <input type="botton" value="+ 关注" readonly>
                                             </div>
                                         </div>
 
@@ -296,6 +296,7 @@ export default {
         display: flex;
         display: -webkit-flex;
         justify-content: space-between;
+        padding:0.2rem 0;
     }
     .newslist .comment label{
         color: #41bb51;
