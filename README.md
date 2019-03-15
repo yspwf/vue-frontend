@@ -10,38 +10,40 @@ vue的前端
 ```
 //父组件
 <template>
-	<div>
-		<v-focusinfo v-bind:focusinfo="focuslist"></v-focusinfo>
-	</div>
+   <div>
+      <v-focusinfo v-bind:focusinfo="focuslist"></v-focusinfo>
+   </div>
 </template>
 
 <script>
-	data(){
-			return {
-					focuslist:[
-							{..........},
-							{..........}
-					]
-			}
+     data(){
+		return {
+			  focuslist:[
+			    {..........},
+			    {..........}
+			  ]
+		 }
 	},
 	components:{
-			vFocusinfo:vfocusinfo
+           vFocusinfo:vfocusinfo
 	}
 </script>
-
+```
+```
 //子组件
 <template>
 	<div>
-			<div v-for="(item, index) in focuslist">
-					...............
-			</div>		
+	   <div v-for="(item, index) in focuslist">
+	      ...............
+	   </div>		
 	</div> 
 </template>
 
 <script>
 	data(){
-			return {
-			}
+	 return {
+	 
+	   }
 	},
 	props:['focuslist']
 </script>
