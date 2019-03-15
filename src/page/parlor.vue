@@ -58,7 +58,30 @@
                 <div class="title">
                     <h6><i class="vertical"></i>消费评价</h6>
                 </div>
-                <div class="newslist">
+
+                <vcomment v-bind:comments="comments"></vcomment>
+
+                <!-- <div class="newslist" v-for="(item, index) in comments">
+                    <div class="user">
+                        <div class="userimg">
+                            <img :src="item.headimg">
+                        </div>
+                        <div class="username">
+                            <label>{{item.name}}</label>
+                            <span>{{item.time}}</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        {{item.comment}}
+                    </div>
+                    <div class="picturelist" v-if="item.comment_img != ''">
+                        <div class="picture" v-for="(item, index) in item.comment_img">
+                            <img :src="item.img">
+                        </div>
+                    </div>
+               </div> -->
+
+                <!-- <div class="newslist">
                     <div class="user">
                         <div class="userimg">
                             <img src="../images/headimg.png">
@@ -85,9 +108,9 @@
                             <img src="../images/tow.jpg">
                         </div>
                     </div>
-               </div>
+               </div> -->
 
-               <div class="newslist">
+               <!-- <div class="newslist">
                     <div class="user">
                         <div class="userimg">
                             <img src="../images/headimg.png">
@@ -100,51 +123,9 @@
                     <div class="content">
                         vue的事件系统，vue组件间的单项数据流，props从父组件向子组件传递数据，子组件通过事件emit向父组件传递事件，父组件通过on监听子组件的事件来处理具体事务。
                     </div>
-               </div>
+               </div> -->
 
-               <div class="newslist">
-                    <div class="user">
-                        <div class="userimg">
-                            <img src="../images/headimg.png">
-                        </div>
-                        <div class="username">
-                            <label>PR小董 </label>
-                            <span>2019-02-03</span>
-                        </div>
-                    </div>
-                    <div class="content">
-                        vue的事件系统，vue组件间的单项数据流，props从父组件向子组件传递数据，子组件通过事件emit向父组件传递事件，父组件通过on监听子组件的事件来处理具体事务。
-                    </div>
-               </div>
-
-               <div class="newslist">
-                    <div class="user">
-                        <div class="userimg">
-                            <img src="../images/headimg.png">
-                        </div>
-                        <div class="username">
-                            <label>PR小董 </label>
-                            <span>2019-02-03</span>
-                        </div>
-                    </div>
-                    <div class="content">
-                        vue的事件系统，vue组件间的单项数据流，props从父组件向子组件传递数据，子组件通过事件emit向父组件传递事件，父组件通过on监听子组件的事件来处理具体事务。
-                    </div>
-                    <div class="picturelist">
-                        <div class="picture">
-                            <img src="../images/one.jpg">
-                        </div>
-                        <div class="picture">
-                            <img src="../images/tow.jpg">
-                        </div>
-                        <div class="picture">
-                            <img src="../images/tow.jpg">
-                        </div>
-                        <div class="picture">
-                            <img src="../images/tow.jpg">
-                        </div>
-                    </div>
-               </div>
+              
         </div>
 
 
@@ -159,15 +140,50 @@
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.css';
 import orderbtn from './orderbtn.vue';
+import vcomment from '../component/comment.vue';
 export default {
     data(){
         return {
             a:false,
-            b:[]
+            b:[],
+            comments:[
+                {
+                    'headimg':'./src/images/headimg.png',
+                    'name':'PG玩家',
+                    'time':'2019-02-03',
+                    'comment':'体验好,损失过多性能的前提下可以使用现有命令来实现的功能',
+                    'comment_img':[
+                        {'img':'./src/images/one.jpg'},
+                        {'img':'./src/images/tow.jpg'},
+                        {'img':'./src/images/tow.jpg'},
+                        {'img':'./src/images/one.jpg'},
+                    ]
+                },
+                {
+                    'headimg':'./src/images/headimg.png',
+                    'name':'赛车俱乐部',
+                    'time':'2019-02-03',
+                    'comment':'对于不常用到的或者在不损失过多性能的前提下可以使用现有命令来实现的功能，Redis就不会单独提供命令来实现。这一原则使得Redis在拥有强大功能的同时保持着相对精简的命令。',
+                    'comment_img':[]
+                },
+                {
+                    'headimg':'./src/images/headimg.png',
+                    'name':'PG玩家',
+                    'time':'2019-02-03',
+                    'comment':'体验好,损失过多性能的前提下可以使用现有命令来实现的功能',
+                    'comment_img':[
+                        {'img':'./src/images/one.jpg'},
+                        {'img':'./src/images/tow.jpg'},
+                        {'img':'./src/images/tow.jpg'},
+                        {'img':'./src/images/one.jpg'},
+                    ]
+                },
+            ]
         }
     },
     components:{
-        orderbtn:orderbtn
+        orderbtn:orderbtn,
+        vcomment:vcomment
     },
     mounted() {
         var mySwiper = new Swiper('.swiper-container', {
@@ -315,51 +331,6 @@ export default {
 
 
     
-    .newslist{
-        border-bottom: 1px solid #d8d8d8;
-        padding: 0.3rem 0;
-    }
-    .newslist,.newslist .user .username{
-        flex-direction:column;
-        padding:0.2rem 0;
-    }
-    .newslist,.newslist .user,.newslist .user .username,.newslist .picturelist,.newslist .comment{
-        display: flex;
-        display: -webkit-flex;
-    }
-    .newslist .user .userimg{
-        width: 12%;
-        height: 1.3rem;
-    }
-    .newslist .user .username{
-        padding: 0 0.3rem;
-    }
-    .newslist .user .username label{
-        font-size: 0.5rem;
-        padding-top: 0.1rem;
-    }
-    .newslist .user .username span{
-        font-size: 0.2rem;
-    }
-    .newslist .content{
-        font-size: 0.45rem;
-        padding: 0.1rem;
-    }
-    .newslist .picturelist{
-
-    }
-    .newslist .picture{
-        height:2.5rem;
-        padding:0 0.05rem;
-    }
-    .newslist .comment{
-        font-size: 0.4rem;
-        display: flex;
-        display: -webkit-flex;
-        justify-content: space-between;
-    }
-    .newslist .comment label{
-        color: #41bb51;
-    }
+   
     
 </style>

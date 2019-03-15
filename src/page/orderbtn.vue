@@ -35,13 +35,13 @@ export default {
     }
     .btn_layout .server{
         width:15%;
-        height:1.5rem;
+        height:2.5rem;
         background:url('../images/icon/server.png') no-repeat center center;
         background-size:60%;
     }
     .btn_layout .order_now{
         width: 85%;
-        height: 1.5rem;
+        height: 2.5rem;
         text-align: center;
         font-size: 0.6rem;
         line-height: 1.5rem;

@@ -49,7 +49,7 @@ export default {
     }
     .btn_layout .server{
         width: 35%;
-        height: 1.5rem;
+        height: 2.5rem;
         font-size: 0.5rem;
         text-align: center;
         line-height: 1.5rem;
@@ -61,7 +61,7 @@ export default {
     }
     .btn_layout .order_now{
         width: 65%;
-        height: 1.5rem;
+        height: 2.5rem;
         text-align: center;
         font-size: 0.6rem;
         line-height: 1.5rem;
